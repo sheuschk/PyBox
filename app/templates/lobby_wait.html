@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{%- block title %} Lobby {%  endblock %}
+{% block header %} Lobby: {{  name }} {% endblock %}
+{% block content %}
+    <h2>Code: {{ code }}</h2>
+<b> Users </b>
+<ul id="lobby_user_list" data-ajax-url="{{ url_for('main.lobby_users') }}">
+
+</ul>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    {{ form.start() }}<br>
+</form>
+
+<script src='{{ url_for('static', filename='js/lobby_wait.js') }}'></script>
+{% endblock %}

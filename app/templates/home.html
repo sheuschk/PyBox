@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{%- block title %} Home {%  endblock %}
+{% block header %} Hello {{  name }} {% endblock %}
+{% block content %}
+<p id="lobby_name">Lobby: {{ lobby_name }}</p>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jQuery.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/app.js' ) }}"></script>
+<div id="guess_game" style="display: none">
+    <h2>Guess Game</h2>
+    <p>Guess a number between 1 and 100</p>
+    <input id="guess_input" type="number">
+    <input type="submit" onclick="submit_guess_game()">
+</div>
+{% endblock %}

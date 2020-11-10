@@ -1,0 +1,7 @@
+*/__pycache__/*
+/.idea
+*/venv/*
+*/notes/*
+*/photos/*
+*.sqlite
+*.env
