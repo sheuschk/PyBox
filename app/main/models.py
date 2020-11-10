@@ -30,8 +30,7 @@ class Lobby:
     def check_existence():
         if Lobby.__instance is None:
             return None
-        else:
-            return True
+        return True
 
     def __init__(self, name):
         self.name = name
